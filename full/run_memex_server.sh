@@ -8,4 +8,6 @@ GLOG_logtostderr=1 ${CODE_PATH}/computeFeatAndSearch.bin \
     -i /home/rgirdhar/memexdata/Dataset/processed/0004_IST/Search/indexes/fullImg_300bit.index \
     -s /home/rgirdhar/memexdata/Dataset/processed/0004_IST/Features/pool5_normed \
     --imgslist /home/rgirdhar/memexdata/Dataset/processed/0004_IST/lists/Images.txt \
-    --port-num 5558
+    --duplist /home/rgirdhar/memexdata/Dataset/processed/0004_IST/lists/Uniq_sha1.txt \
+    --port-num 5558 \
+    --num-output 100
