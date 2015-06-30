@@ -1,0 +1,18 @@
+import zmq
+context = zmq.Context()
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://localhost:5560")
+#socket.send(b"http://10.3.2.61/~ubuntu/projects/001_backpage/dataset/corpus/ImagesNevada/Nevada_2012_10_10_1349862492000_4_0.jpg" + "\0")
+#socket.send(b"http://10.3.2.61/~ubuntu/projects/001_backpage/dataset/corpus/ImagesTexas/Texas_2012_10_10_1349841918000_4_2.jpg" + "\0")
+#socket.send(b"http://10.3.2.61/~ubuntu/projects/001_backpage/dataset/corpus/ImagesNevada/Nevada_2012_10_2_1349231418000_8_5.jpg" + "\0")
+#socket.send(b"http://10.3.2.61/~ubuntu/projects/001_backpage/dataset/corpus/ImagesNevada/Nevada_2014_1_27_1390843513000_4_1.jpg" + "\0")
+#socket.send(b"http://10.3.2.61/~ubuntu/projects/001_backpage/dataset/corpus/ImagesNevada/Nevada_2013_9_3_1378226016000_11_4.jpg" + "\0")
+#socket.send(b"http://10.1.94.128:8000/~rgirdhar/memex/dataset/0001_Backpage/Images/ImagesTexas/Texas_2012_10_10_1349845377000_5_0.jpg" + "\0")
+#socket.send(b"http://10.1.94.128:8000/~rgirdhar/memex/dataset/0001_Backpage/Images/ImagesTexas/Texas_2012_10_10_1349849382000_5_0.jpg" + "\0")
+socket.send(b"http://sun.pc.cs.cmu.edu/~rohit/Work/Datasets/0003_MemexIST/corpus/59516079.jpg" + "\0")
+#socket.send(b"http://10.1.94.128:8000/~rgirdhar/memex/dataset/0001_Backpage/Images/ImagesTexas/Texas_2012_10_10_1349849382000_5_4.jpg" + "\0")
+#socket.send(b"http://10.1.94.128:8000/~rgirdhar/memex/dataset/0001_Backpage/Images/ImagesTexas/Texas_2012_10_10_1349870396000_5_0.jpg" + "\0")
+#socket.send(b"http://10.1.94.128:8000/~rgirdhar/memex/dataset/0001_Backpage/Images/ImagesTexas/Texas_2012_10_10_1349870396000_5_3.jpg" + "\0")
+#socket.send(b"http://10.1.94.128:8000/~rgirdhar/memex/dataset/0001_Backpage/Images/ImagesTexas/Texas_2012_10_10_1349871507000_7_0.jpg" + "\0")
+message = socket.recv()
+print message
