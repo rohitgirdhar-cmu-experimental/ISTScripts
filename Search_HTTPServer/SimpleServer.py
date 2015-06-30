@@ -34,7 +34,7 @@ if __name__ == "__main__":
     if sys.argv[1] == 'full':
       run_on_port = 8892
       service_port = 5558
-#    elif sys.argv[1] == 'bg':
-#      run_on_port = 8891
-#      service_port = 5557
+    elif sys.argv[1] == 'bg':
+      run_on_port = 8893
+      service_port = 5560
     run(server_address = ('', run_on_port), service_port = service_port)

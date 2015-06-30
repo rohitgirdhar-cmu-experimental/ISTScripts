@@ -21,7 +21,7 @@ def make_request(url):
       print err
 
 def main():
-    port = 8892
+    port = 8893
     try:
       make_request("http://10.1.94.128:%d" % port)
     except urllib2.HTTPError, err:
