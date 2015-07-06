@@ -1,6 +1,7 @@
 import zmq
 import happybase
 import base64
+import sys
 
 port_num = 5554
 DEBUG = False
@@ -19,6 +20,7 @@ while True:
   imid = socket.recv()
   if DEBUG:
     print 'Received %s' % imid
+    sys.stdout.flush()
   try:
     img = base64.b64decode(tab.row(imid)['image:orig'])
   except:
