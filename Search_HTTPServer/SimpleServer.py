@@ -37,4 +37,7 @@ if __name__ == "__main__":
     elif sys.argv[1] == 'bg':
       run_on_port = 8893
       service_port = 5560
+    elif sys.argv[1] == 'full-ITQ':
+      run_on_port = 8894
+      service_port = 5562
     run(server_address = ('', run_on_port), service_port = service_port)

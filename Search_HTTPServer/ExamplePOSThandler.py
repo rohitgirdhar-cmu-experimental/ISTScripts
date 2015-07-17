@@ -60,5 +60,5 @@ class a_POST_handler:
     try:
       url = self.tab.row(imid)['meta:s3uri']
     except:
-      url = imid
+      url = 'Cant find S3 URI!!. The id is = ' + str(imid)
     return url
