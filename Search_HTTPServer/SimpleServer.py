@@ -40,4 +40,10 @@ if __name__ == "__main__":
     elif sys.argv[1] == 'full-ITQ':
       run_on_port = 8894
       service_port = 5562
+    elif sys.argv[1] == 'bg-ITQ':
+      run_on_port = 8895
+      service_port = 5563
+    else:
+      print 'INVALID options'
+
     run(server_address = ('', run_on_port), service_port = service_port)

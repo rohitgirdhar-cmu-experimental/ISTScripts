@@ -1,7 +1,7 @@
 CODE_PATH=/home/rgirdhar/data/Work/Code/0001_FeatureExtraction/ComputeFeatures/Features/CNN/ver2/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CODE_PATH}/../external/caffe/build/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/srv2/rgirdhar/Software/cpp/zeromq/install/lib/
-GLOG_logtostderr=0 ${CODE_PATH}/computeFeatures.bin \
+GLOG_logtostderr=0 nice -n 10 ${CODE_PATH}/computeFeatures.bin \
     -i service \
     -q /home/rgirdhar/memexdata/Dataset/processed/0004_IST/lists/Images.txt \
     -n ${CODE_PATH}/../deploy_memexgpu.prototxt \
@@ -14,5 +14,5 @@ GLOG_logtostderr=0 ${CODE_PATH}/computeFeatures.bin \
     -s \
     --pool avg \
     --uniquelist /memexdata/Dataset/processed/0004_IST/lists/Uniq_sha1.txt \
-    -z 251063
+    -z 10000000
 
