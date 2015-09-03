@@ -11,4 +11,5 @@ GLOG_logtostderr=1 ${CODE_PATH}/computeFeatAndSearch.bin \
     --imgslist /home/rgirdhar/memexdata/Dataset/processed/0004_IST/lists/Images.txt \
     --duplist /home/rgirdhar/memexdata/Dataset/processed/0004_IST/lists/Uniq_sha1.txt \
     --port-num 5563 \
-    --num-output 100
+    --num-output 100 \
+    --nRerank 1000
